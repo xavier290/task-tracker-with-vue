@@ -3,24 +3,21 @@
     <h1>Convenient and productive task manager</h1>
     <p>We have created an intuitive and convenient interface for teamwork.</p>
 
-    <Button name='Get started' color='white' width="100%" height="52px"/>
+    <router-link  to="/login"> 
+      <Button name='Get started' color='white' width="100%" height="52px"/>
+    </router-link>
+
   </section>
 </template>
 
 <script>
-  import Button from "./button.vue";
-  import Bimage from "../assets/bg-landing.svg";
+  import Button from "../components/button.vue";
 
 export default {
   name: 'Landing',
   components : {
     Button
   },
-  data() {
-    return {
-      Bimage
-    }
-  }
 }
 </script>
 
@@ -43,11 +40,7 @@ export default {
     margin-bottom: 6px;
   }
   h1 {
-    font-family: 'Comfortaa', cursive;
     font-size: 28px;
-  }
-  p {
-    font-family: 'Nunito', sans-serif;
   }
   button {
     width: 100% !important;
